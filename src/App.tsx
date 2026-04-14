@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Home from "@/pages/Home";
@@ -6,9 +7,7 @@ import Drinks from "@/pages/Drinks";
 import Promos from "@/pages/Promos";
 import Gear from "@/pages/Gear";
 import Athletes from "@/pages/Athletes";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -19,9 +18,6 @@ function ScrollToTop() {
 
   return null;
 }
-
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 
 function NotFound() {
   return (

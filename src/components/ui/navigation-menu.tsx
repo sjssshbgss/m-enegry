@@ -63,8 +63,9 @@ const navigationMenuTriggerStyle = cva(
 function NavigationMenuTrigger({
   className,
   children,
+  asChild,
   ...props
-}: NavigationMenuPrimitive.Trigger.Props) {
+}: NavigationMenuPrimitive.Trigger.Props & { asChild?: boolean }) {
   return (
     <NavigationMenuPrimitive.Trigger
       data-slot="navigation-menu-trigger"
@@ -124,8 +125,9 @@ function NavigationMenuPositioner({
 
 function NavigationMenuLink({
   className,
+  asChild,
   ...props
-}: NavigationMenuPrimitive.Link.Props) {
+}: NavigationMenuPrimitive.Link.Props & { asChild?: boolean }) {
   return (
     <NavigationMenuPrimitive.Link
       data-slot="navigation-menu-link"

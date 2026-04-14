@@ -50,11 +50,11 @@ export default function Navbar() {
           
           {/* Mobile Nav */}
           <Sheet>
-            <SheetTrigger asChild>
+            <SheetTrigger render={
               <Button variant="ghost" size="icon" className="lg:hidden text-white/70 hover:text-primary">
                 <Menu className="h-6 w-6" />
               </Button>
-            </SheetTrigger>
+            } />
             <SheetContent side="right" className="bg-black border-white/10 p-0">
               <div className="flex flex-col gap-8 p-12 pt-24">
                 {navItems.map((item) => (
